@@ -8,34 +8,6 @@
     line-height: 150%;
 }
 
-/* Cuando la pantalla es menor a 1000px  (tablets y teléfonos inteligentes)*/
-@media only screen and (max-width : 1000px) {
-
-    textarea{
-        max-width: 300px;
-        height: 270px;
-    }
-    .botones{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .btnEncriptar{
-        font-size: 0.4rem;
-        height: 25px;
-        width: 100px;
-    }
-    .btnDesEncriptar{
-        font-size: 0.4rem;
-        height: 40px;
-        width: 100px;
-        margin-top: 5px;
-    }
-    
-}
-
-/*--------------------------------------------------*/
-
 
 .logo{
     padding-top: 10px;
@@ -48,31 +20,35 @@ h1{
 }
 main{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
 }
 
 .text-area{
-    width: 500px;
+    width: 100%;
     height: 300px;
+    background-image: url(img/fondo-puntos.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px;
     border: none;
     border-radius: 24px;
     color: #0a3871;
-    background-color: #fff;
     text-transform: lowercase;
 }
+
 ::placeholder{color: rgba(10, 56, 113, 0.3);}
 .text-area:focus{
     outline: none;
 }
 
 .mensajeEncrip{
+    width: 100%;
+    height: 300px;
     background: white;
     background-image: url(img/muneco.png);
     background-repeat: no-repeat;
     border: 1px solid #0a3871;
     border-radius: 24px;
     color:#0a3871;
-    margin-left: 2rem;
 }
 .mensajeEncrip:focus{
     outline: none;
@@ -113,7 +89,7 @@ main{
     cursor: pointer;
     height: 50px;
     width: 200px;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 .section2{
     display: flex;
@@ -140,4 +116,59 @@ h2{
     margin-left: 15px;
     width: 20px;
     height: 20px;
+}
+
+    
+
+/* Cuando la pantalla es menor a 1000px  (tablets y teléfonos inteligentes)*/
+@media (max-width : 1000px) {
+
+    body{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+    h1{
+        font-size: 0.8rem;
+    }
+    .text-area{
+        max-width: 90%;
+    }
+    .mensajeEncrip{
+        max-width: 90%;
+    }
+    .btnEncriptar{
+        max-width: 120px;
+        max-height: 30px;
+        font-size: 0.5rem;
+    }
+    .btnDesEncriptar{
+        max-width: 120px;
+        max-height: 30px;
+        font-size: 0.5rem;
+    }
+    .btnCopiar{
+        max-width: 120px;
+        max-height: 30px;
+        font-size: 0.5rem;
+        margin-top: 22px;
+    }
+}
+
+/*--------------------------------------------------*/
+
+@media (max-width : 550px) {
+    h1{
+        font-size: 0.7rem;
+    }
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section2{
+        margin-top: 20px;
+       text-align: center;
+    }
+    
 }
