@@ -1,5 +1,7 @@
 const textArea = document.querySelector(".text-area"); //captura el texto del text area
 const mensaje = document.querySelector(".mensajeEncrip");
+const p = document.getElementById('texto-copiado');
+
 
 
 function encriptar(stringEncriptada){
@@ -30,6 +32,7 @@ function btnEncriptar(){
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none"
+    p.innerText = "...";
 }
 
 function btnDesencriptar(){
@@ -37,9 +40,12 @@ function btnDesencriptar(){
     mensaje.value = textoEncriptado;
     textArea.value = "";
     mensaje.style.backgroundImage = "none"
+    p.innerText = "...";
 }
 
 function btnCopiar(){
     const textoCopiado = mensaje.value;
     navigator.clipboard.writeText(textoCopiado)
+    mensaje.value = "";
+    p.innerText = "Texto copiado";
 }
